@@ -1,29 +1,71 @@
-package ee.askend.filters.domain.criteria;
+package ee.askend.filters.domain;
 
 import jakarta.persistence.*;
 
 @Entity
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "type", discriminatorType = DiscriminatorType.STRING)
-public abstract class FilterCriteria {
+public class FilterCriteria {
   @Id
-  @GeneratedValue
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
-  private String field;
+  @ManyToOne
+  @JoinColumn(name="filter_id", nullable=false)
+  private Filter filter;
+
+  @Column(nullable = false)
+  @Enumerated(EnumType.STRING)
+  private Field field;
+
+  @Column(nullable = false, name = "`value`")
   private String value;
 
-  public abstract Enum<?> getOperator();
+  @Column(nullable = false)
+  @Enumerated(EnumType.STRING)
+  private Operator operator;
 
   public Long getId() {
     return id;
   }
 
-  public String getField() {
+  public void setId(Long id) {
+    this.id = id;
+  }
+
+  public Field getField() {
     return field;
+  }
+
+  public void setField(Field field) {
+    this.field = field;
   }
 
   public String getValue() {
     return value;
+  }
+
+  public void setValue(String value) {
+    this.value = value;
+  }
+
+  public Operator getOperator() {
+    return operator;
+  }
+
+  public void setOperator(Operator operator) {
+    this.operator = operator;
+  }
+
+  @PrePersist @PreUpdate
+  private void validateOperator() {
+    DataType dataType = field.getDataType();
+    if (!dataType.getSupportedOperators().contains(operator)) {
+      throw new IllegalArgumentException(
+        String.format("Operator %s is not allowed for data type %s", operator, dataType)
+      );
+    }
+  }
+
+  public void setFilter(Filter filter) {
+    this.filter = filter;
   }
 }

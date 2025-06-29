@@ -1,0 +1,20 @@
+.date-picker-input .MuiPickersInputBase-root {
+  height: 40px;
+  width: 288px;
+}
+
+.date-picker-input .MuiFormControl-root {
+  height: 40px;
+  width: 288px;
+  flex: 1;
+
+}
+
+.date-picker-input {
+  flex: 1;
+}
+
+.text-field-flex {
+  flex: 1;
+  min-width: 200px;
+}

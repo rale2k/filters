@@ -1,0 +1,33 @@
+.filter-table-header-cell {
+  font-weight: bold;
+}
+
+.filter-table-empty-cell {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.filter-criteria-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px; 
+}
+
+.filter-chip {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+
+.filter-name-cell {
+  word-break: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+
+.filter-actions-box {
+  display: flex;
+  gap: 8px; /* 1 in MUI usually translates to 8px */
+}

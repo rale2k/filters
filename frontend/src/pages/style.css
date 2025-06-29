@@ -1,0 +1,33 @@
+.main-container {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.header-box {
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-right-box {
+  display: flex;
+  gap: 8px;
+}
+
+.filter-paper {
+  padding: 12px;
+  max-height: 500px;
+  overflow: scroll;
+}
+
+.add-filter-title {
+  color: white;
+  border-radius: 4px;
+}
