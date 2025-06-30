@@ -1,7 +1,7 @@
 import { ThemeProvider } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
 import { createTheme } from '@mui/material/styles'
-import Main from './pages/Main'
+import Root from './pages/Root'
 import { LocalizationProvider } from '@mui/x-date-pickers'
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
 
@@ -24,7 +24,7 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <CssBaseline />
-        <Main />
+        <Root />
       </LocalizationProvider>
     </ThemeProvider>
   )

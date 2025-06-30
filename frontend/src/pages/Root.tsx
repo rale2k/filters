@@ -19,7 +19,7 @@ import FilterForm from '../components/filterform'
 import { deleteFilter, fetchFilters } from './actions'
 import FilterTable from '../components/filtertable'
 
-const Main = () => {
+const Root = () => {
   const [showFilter, setShowFilter] = useState(false)
   const [filterProvider, setFilterProvider] = useState(FilterProvider.MODAL)
   const [filters, setFilters] = useState<Filter[]>([])
@@ -135,4 +135,4 @@ const Main = () => {
   )
 }
 
-export default Main
+export default Root

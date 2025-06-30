@@ -181,7 +181,6 @@ const FilterForm = (props: FilterProps) => {
       <Button
         onClick={async () => {
           const response = await postFilter(filter)
-          console.log(response)
           if (response && !response.ok) {
             const json = await response.json()
             setErrors(json.errors)
