@@ -4,6 +4,8 @@ An application which has a button to create new filter and representation of alr
 ## Frontend
 React 19 + Vite + MaterialUI
 
+No tests
+
 NodeJS 22 recommended
 
 ```sh 
@@ -13,6 +15,8 @@ npm run dev
 
 ## Backend
 Spring Boot 3.5.2 + H2 DB + Flyway
+
+Tests
 
 Java 21 recommended
 
