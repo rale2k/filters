@@ -21,5 +21,5 @@ The design image also showed a select option, but as this was not mentioned in t
 
 ```
 28.06.2025 - 1.5h - checking out requirements, boilerplate setup
-29.06.2025 - 7h - dev, test
+29.06.2025 - 8h - dev, test (still not quite satisfied :/)
 ```

@@ -1,3 +1,3 @@
-import FilterTable from "./FilterTable";
+import FilterTable from './FilterTable'
 
-export default FilterTable;
+export default FilterTable

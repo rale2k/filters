@@ -26,7 +26,7 @@ const Main = () => {
   const [errors, setErrors] = useState<string[]>([])
 
   useEffect(() => {
-    loadFilters();
+    loadFilters()
   }, [])
 
   const handleSetFilterProvider = (
@@ -103,10 +103,18 @@ const Main = () => {
         {showFilter && filterProvider === FilterProvider.PAGE && (
           <Paper>
             <Box className="filter-paper">
-              <Typography variant="h5" gutterBottom className="add-filter-title" sx={{ backgroundColor: 'primary.main' }}>
+              <Typography
+                variant="h5"
+                gutterBottom
+                className="add-filter-title"
+                sx={{ backgroundColor: 'primary.main' }}
+              >
                 Add Filter
               </Typography>
-              <FilterForm closeCallback={() => setShowFilter(false)} createCallback={() => loadFilters()} />
+              <FilterForm
+                closeCallback={() => setShowFilter(false)}
+                createCallback={() => loadFilters()}
+              />
             </Box>
           </Paper>
         )}
@@ -115,7 +123,14 @@ const Main = () => {
       <Modal
         open={showFilter && filterProvider === FilterProvider.MODAL}
         handleClose={() => setShowFilter(!showFilter)}
-        children={<FilterForm closeCallback={() => setShowFilter(false)} createCallback={() => loadFilters()} />} modalTitle={'Add filter'} />
+        children={
+          <FilterForm
+            closeCallback={() => setShowFilter(false)}
+            createCallback={() => loadFilters()}
+          />
+        }
+        modalTitle={'Add filter'}
+      />
     </Container>
   )
 }

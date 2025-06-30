@@ -21,7 +21,7 @@ export const fetchClassifiers = async (): Promise<any[] | any | undefined> => {
 
     return [fieldsWithTypes, fieldsWithOps]
   } catch (error) {
-    throw new Error("error fetching classifiers")
+    throw new Error('error fetching classifiers')
   }
 }
 

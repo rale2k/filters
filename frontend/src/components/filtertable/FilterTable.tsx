@@ -28,14 +28,22 @@ const FilterTable = ({ filters, deleteFilter }: FilterTableProps) => {
           <TableHead>
             <TableRow>
               <TableCell className="filter-table-header-cell">Name</TableCell>
-              <TableCell className="filter-table-header-cell">Criteria</TableCell>
-              <TableCell className="filter-table-header-cell">Actions</TableCell>
+              <TableCell className="filter-table-header-cell">
+                Criteria
+              </TableCell>
+              <TableCell className="filter-table-header-cell">
+                Actions
+              </TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {filters.length === 0 ? (
               <TableRow>
-                <TableCell colSpan={5} align="center" className="filter-table-empty-cell">
+                <TableCell
+                  colSpan={5}
+                  align="center"
+                  className="filter-table-empty-cell"
+                >
                   <Typography variant="body1" color="textSecondary">
                     No filters
                   </Typography>
@@ -50,9 +58,7 @@ const FilterTable = ({ filters, deleteFilter }: FilterTableProps) => {
                     </Typography>
                   </TableCell>
                   <TableCell>
-                    <Box
-                      className="filter-criteria-box"
-                    >
+                    <Box className="filter-criteria-box">
                       {filter.criteria.map((criteria) => (
                         <Chip
                           key={criteria.id}

@@ -20,7 +20,10 @@ const Modal = (props: ModalProps) => {
 
   return (
     <Dialog open={open} onClose={handleClose} maxWidth="md" fullWidth>
-      <DialogTitle className="modal-title-bar" sx={{ backgroundColor: 'primary.main' }}>
+      <DialogTitle
+        className="modal-title-bar"
+        sx={{ backgroundColor: 'primary.main' }}
+      >
         <Typography variant="h6" component="div">
           {modalTitle}
         </Typography>
@@ -28,9 +31,7 @@ const Modal = (props: ModalProps) => {
           <Close />
         </IconButton>
       </DialogTitle>
-      <DialogContent className="modal-content">
-        {children}
-      </DialogContent>
+      <DialogContent className="modal-content">{children}</DialogContent>
     </Dialog>
   )
 }
