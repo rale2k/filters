@@ -43,4 +43,6 @@ chmod +x ./gradlew
 ```
 28.06.2025 - 1.5h - checking out requirements, boilerplate setup
 29.06.2025 - 8h - dev, test
+
+i set myself an arbitrary deadline on sunday to not spend too much time
 ```
