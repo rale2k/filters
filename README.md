@@ -8,6 +8,7 @@ No tests
 
 NodeJS 22 recommended
 
+### Start
 ```sh 
 npm i 
 npm run dev
@@ -33,10 +34,20 @@ Tests
 
 Java 21 recommended
 
+### Start
 ```sh 
 chmod +x ./gradlew
 ./gradlew bootRun
 ```
+
+### API
+> ``GET /filter`` - get all filters
+
+> ``POST /filter ``- create new filter
+
+> ``DELETE /filters/{id}`` - delete filter by id
+
+> ``GET /classifiers`` - get all supported fields with their supported comparison operands/type
 
 ## Time spent
 
