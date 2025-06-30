@@ -2,7 +2,7 @@
 An application which has a button to create new filter and representation of already created filters.
 
 ## Frontend
-React 19 + Vite + MaterialUI
+TypeScript + React 19 + Vite + MaterialUI
 
 No tests
 
